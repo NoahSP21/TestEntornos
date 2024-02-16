@@ -19,4 +19,10 @@ public class esPalindromoTest {
         GestorPalabras c = new GestorPalabras();
         assertTrue(c.esPalindromo("madam"));
     }
+
+    @Test
+    public void esPalindromoFalse()  {
+        GestorPalabras c = new GestorPalabras();
+        assertFalse(c.esPalindromo("casa"));
+    }
 }
