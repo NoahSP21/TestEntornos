@@ -18,12 +18,17 @@ public class esPalindromo {
         if (palabra.length() <= 1) {
             throw new LowNumberException("Has de introducir una palabra de menos de 1 letra");
         } else {
-        }
-        for (int i = 0; i < palabraFormateada.length() / 2; i++) {
-            if (palabraFormateada.charAt(i) != palabraFormateada.charAt(palabraFormateada.length() - i - 1)) {
-                return false;
+            for (int i = 0; i < palabraFormateada.length(); i++) {
+                if (Character.isDigit(palabra.charAt(i))) {
+                    throw new DigitException("Has introducido un número");
+                }
             }
+            for (int i = 0; i < palabraFormateada.length() / 2; i++) {
+                if (palabraFormateada.charAt(i) != palabraFormateada.charAt(palabraFormateada.length() - i - 1)) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
     }
 }
