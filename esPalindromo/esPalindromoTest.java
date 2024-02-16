@@ -31,4 +31,10 @@ public class esPalindromoTest {
         GestorPalabras c = new GestorPalabras();
         assertTrue(c.esPalindromo(""));
     }
+
+    @Test(expected = LowNumberException.class)
+    public void palindromo1Letra() throws LowNumberException {
+        GestorPalabras c = new GestorPalabras();
+        assertTrue(c.esPalindromo("a"));
+    }
 }
