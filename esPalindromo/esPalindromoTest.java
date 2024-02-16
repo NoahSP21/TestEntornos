@@ -1,4 +1,4 @@
-﻿
+import com.mycompany.Exceptions.LowNumberException;
 import com.mycompany.maven.GestorPalabras;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
@@ -24,5 +24,11 @@ public class esPalindromoTest {
     public void esPalindromoFalse()  {
         GestorPalabras c = new GestorPalabras();
         assertFalse(c.esPalindromo("casa"));
+    }
+
+    @Test (expected = LowNumberException.class)
+    public void esPalindromoVacio() throws LowNumberException {
+        GestorPalabras c = new GestorPalabras();
+        assertTrue(c.esPalindromo(""));
     }
 }
