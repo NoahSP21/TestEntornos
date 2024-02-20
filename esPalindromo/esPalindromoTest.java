@@ -51,4 +51,10 @@ public class esPalindromoTest {
         GestorPalabras c = new GestorPalabras();
         assertTrue(c.esPalindromo(null));
     }
+
+    @Test
+    public void esPalindromoConTildeTrue() throws LowNumberException, DigitException {
+        GestorPalabras c = new GestorPalabras();
+        assertTrue(c.esPalindromo("mádam"));
+    }
 }
