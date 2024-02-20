@@ -30,16 +30,22 @@ public class PalabraInvertidaTest {
         GestorPalabras gp = new GestorPalabras();
         assertEquals("sccs olol", gp.invertirPalabra("lolo" + " " + "sccs"));
     }
-    
+
     @Test
     public void invertirPalabraTest4() {
         GestorPalabras gp = new GestorPalabras();
         assertEquals(" ihihih", gp.invertirPalabra("hihihi "));
     }
-    
+
     @Test
     public void invertirPalabraTest5() {
         GestorPalabras gp = new GestorPalabras();
         assertEquals("ihihih", gp.invertirPalabra("hihihi"));
+    }
+
+    @Test
+    public void invertirPalabraTest1Letter() throws Exception {
+        GestorPalabras gp = new GestorPalabras();
+        assertEquals("a", gp.invertirPalabra("a"));
     }
 }
