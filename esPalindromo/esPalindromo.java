@@ -6,6 +6,7 @@ package com.mycompany.maven;
 
 import com.mycompany.Exceptions.DigitException;
 import com.mycompany.Exceptions.LowNumberException;
+import java.text.Normalizer;
 
 /**
  *
@@ -14,7 +15,7 @@ import com.mycompany.Exceptions.LowNumberException;
 public class esPalindromo {
 
  public boolean esPalindromo(String palabra) throws LowNumberException, DigitException {
-        String palabraFormateada = palabra.replaceAll("\\s+", "").toLowerCase();
+        String palabraFormateada = Normalizer.normalize(palabra, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "").replaceAll("\\s+", "").toLowerCase();
         if (palabra.length() <= 1) {
             throw new LowNumberException("Has de introducir una palabra de menos de 1 letra");
         } else {
