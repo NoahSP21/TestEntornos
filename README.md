@@ -9,6 +9,14 @@ Este pequeño java verifica si una palabra es palíndromo. Un palíndromo es una
 -DigitException: Caso en el que introduces un número.
 
 # 📚 Documentación
-Al principio el .java que recibimos parecía funcionar bien. Tras varios test iniciales nos percatamos que teniamos varias cosas que cambiar. Para empezar hicimos unos test de True y False que funcionaban correctamente.
-Tras ello se nos ocurrio que el siguiente test sería en caso en el que el String esté vacío. Para ello creamos una excepcion que tambíen usamos para cuando te escribe una palabra de una letra, la excepción es la LowNumberException.
+Al principio el .java que recibimos parecía funcionar bien. Tras varios test iniciales nos percatamos que teniamos varias cosas que cambiar. 
+
+Para empezar hicimos unos test de True y False que funcionaban correctamente.
+Tras ello se nos ocurrio que el siguiente test sería en caso en el que el String esté vacío. 
+Para ello creamos una excepcion que tambíen usamos para cuando te escribe una palabra de una letra, la excepción es la LowNumberException.
+
 El siguiente caso que hicimos fue en el que si escribes un número. Un palíndromo es una palabra por lo que no puede incluir números. Para ello creamos otra excepción, llamada DigitException, y para usarla tuvimos que añadir un for en el método que verifica si es palíndromo.
+
+Tras el anterior caso pensamos que pasaría si es null el String, y correctamente daba error. Para ello lo que hicimos es hacer que se espere la NullPointerException.class.
+
+Por último se nos ocurrió que pasaría si pones una palabra con tilde. En efecto, daba error, por lo que tuvimos que modificar el código del método para que la palabra se "normalice"
