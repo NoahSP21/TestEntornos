@@ -19,4 +19,4 @@ El siguiente caso que hicimos fue en el que si escribes un número. Un palíndro
 
 Tras el anterior caso pensamos que pasaría si es null el String, y correctamente daba error. Para ello lo que hicimos es hacer que se espere la NullPointerException.class.
 
-Por último se nos ocurrió que pasaría si pones una palabra con tilde. En efecto, daba error, por lo que tuvimos que modificar el código del método para que la palabra se "normalice"
+Por último se nos ocurrió que pasaría si pones una palabra con tilde. En efecto, daba error, por lo que tuvimos que modificar el código del método para que la palabra se "normalice".
