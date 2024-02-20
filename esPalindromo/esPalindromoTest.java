@@ -45,4 +45,10 @@ public class esPalindromoTest {
         GestorPalabras c = new GestorPalabras();
         assertTrue(c.esPalindromo("0p"));
     }
+
+    @Test(expected = NullPointerException.class)
+    public void palindromoNull() throws NullPointerException, LowNumberException, DigitException {
+        GestorPalabras c = new GestorPalabras();
+        assertTrue(c.esPalindromo(null));
+    }
 }
