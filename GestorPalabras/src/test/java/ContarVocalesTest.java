@@ -12,19 +12,52 @@ public class ContarVocalesTest {
     public void TestContarConsonantes() {
         GestorPalabras c = new GestorPalabras();
         assertEquals(4,c.contarVocales("ssiss"));
-        assertEquals(4,c.contarVocales("aaayyys"));
+    }
+    @Test
+    public void TestContarConsonantesEnFrase() {
+        GestorPalabras c = new GestorPalabras();
         assertEquals(10,c.contarVocales("pepe tiene un tractor"));
     }
-    //tiene que fallar 
+    @Test
+    public void TestContarConsonantesMayusTilde() {
+        GestorPalabras c = new GestorPalabras();
+        assertEquals(6,c.contarVocales("LÉEME DESPACIO"));
+    }
+    //tienen que fallar 
+    
+    
     @Test
     public void TestContarVocales() {
         GestorPalabras c = new GestorPalabras();
         assertEquals(1,c.contarVocales("ssiss"));
-        assertEquals(1,c.contarVocales("hay"));
-        assertEquals(8,c.contarVocales("yooo kamekamehahhh"));
+    }
+    
+    @Test
+    public void TestContarVocalesConTilde() {
+        GestorPalabras c = new GestorPalabras();
         assertEquals(6,c.contarVocales("allí esta papá"));
-        assertEquals(4,c.contarVocales("pingüino"));        
+    }
+    
+    @Test
+    public void TestContarVocalesConDieresis() {
+        GestorPalabras c = new GestorPalabras();
+        assertEquals(4,c.contarVocales("pingüino"));
+    }
+    
+    @Test
+    public void TestContarVocalesConTildesMayus() {
+        GestorPalabras c = new GestorPalabras();
+        assertEquals(6,c.contarVocales("ALLÍ HAY PLÁTANOS"));
+    }
+    
+    @Test
+    public void TestContarVocalesConMayus() {
+        GestorPalabras c = new GestorPalabras();
+        assertEquals(5,c.contarVocales("VIVA LA PEPA"));
     }
     //tiene que aceptarlo
-
 }
+
+    
+
+
