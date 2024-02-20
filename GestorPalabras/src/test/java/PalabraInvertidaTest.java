@@ -34,7 +34,7 @@ public class PalabraInvertidaTest {
     @Test
     public void invertirPalabraTest4() {
         GestorPalabras gp = new GestorPalabras();
-        assertEquals("ihihih", gp.invertirPalabra("hihihi "));
+        assertEquals(" ihihih", gp.invertirPalabra("hihihi "));
     }
     
     @Test
